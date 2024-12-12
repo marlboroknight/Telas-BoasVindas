@@ -1,0 +1,35 @@
+import React from 'react';
+import { View, Text, ImageBackground, StyleSheet } from 'react-native';
+
+export default function WelcomeScreen() {
+  return (
+    <ImageBackground 
+      source={{ uri: 'https://www.google.com/search?client=ms-android-samsung-ga-rev1&sca_esv=dbc91ea4db14575c&sxsrf=ADLYWILXOlyN5sZPKnG_PBnMhtXKFgqE2g:1734034315938&q=nova+york&udm=2&fbs=AEQNm0AuaLfhdrtx2b9ODfK0pnmi046uB92frSWoVskpBryHTlk_BnclDEVJ373ohNdpcnUJoYN0VIm3hEVb6Wvop33RT79fRJEKr3Nw2F-E-ptjJHi0Bu2ITjjTmD77iAp2kY4IZusEE3zqqB2lRKNKzDhX2NB699CaLCyOnggYUQhr7qTRZXelyAewJQb8mjGTJbYRP0oJ6kKJSgn5R3gafk3kBA98kP2o_Ir7NmINuAhq4rVs5NQ&sa=X&sqi=2&ved=2ahUKEwjx2bebhaOKAxWJA7kGHYPNA0MQtKgLegQIEBAB#vhid=OCme3zrYYg__IM&vssid=mosaic/400x800' }} 
+      style={styles.backgroundImage}
+    >
+      <View style={styles.overlay}>
+        <Text style={styles.welcomeText}>Bem-vindo ao App!</Text>
+      </View>
+    </ImageBackground>
+  );
+}
+
+const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  overlay: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Fundo semi-transparente para melhor contraste
+    padding: 20,
+    borderRadius: 10,
+  },
+  welcomeText: {
+    fontSize: 24,
+    color: '#fff',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
